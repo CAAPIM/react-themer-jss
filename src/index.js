@@ -36,9 +36,9 @@ const mapperDecorator = mapProps(mapper);
  * @public
  */
 const create =
-  (injectSheet: Function) => (component: any, computedTheme: Object = {}) =>
+  (injectSheet: Function) => (component: any, computedStyles: any) =>
     compose(
-      injectSheet(computedTheme.styles),
+      injectSheet(computedStyles),
       mapperDecorator
     )(component);
 

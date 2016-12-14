@@ -63,14 +63,14 @@ TestComponent.propTypes = {
 describe('React Themer JSS', () => {
   test('JSS classes are mapped to the `theme.styles` prop', () => {
     const reactThemerJssMiddleware = createReactThemerJssMiddleware(injectSheetStub);
-    const DecoratedComponent = reactThemerJssMiddleware(TestComponent, testResolvedTheme1);
+    const DecoratedComponent = reactThemerJssMiddleware(TestComponent, testResolvedTheme1.styles);
     const wrapper = shallow(<DecoratedComponent title="test component" />);
     expect(wrapper.html()).toBe('<div class="root-1234">test component</div>');
   });
 
   test('If JSS returns no styles, then `theme.styles` should be an empty object', () => {
     const reactThemerJssMiddleware = createReactThemerJssMiddleware(injectSheetStub);
-    const DecoratedComponent = reactThemerJssMiddleware(TestComponent, testResolvedTheme2);
+    const DecoratedComponent = reactThemerJssMiddleware(TestComponent, testResolvedTheme2.styles);
     const wrapper = shallow(<DecoratedComponent title="test component" />);
     expect(wrapper.html()).toBe('<div>test component</div>');
   });
