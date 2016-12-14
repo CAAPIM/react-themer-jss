@@ -1,0 +1,6 @@
+.github
+node_modules
+flow-typed
+example
+src
+tests

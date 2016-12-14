@@ -1,0 +1,5 @@
+lib/*
+example/*
+coverage/*
+flow-typed/*
+node_modules/*
