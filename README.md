@@ -6,14 +6,13 @@
 [![devDependency Status](https://david-dm.org/caapim/react-themer-jss/dev-status.svg)](https://david-dm.org/caapim/react-themer-jss#info=devDependencies)
 ************************************************************
 
-Themer middleware for React JSS integration.
+## Overview
+[Themer](https://github.com/CAAPIM/themer) middleware for [React JSS](https://github.com/cssinjs/react-jss) integration. This library allows component developers to use JSS to style React components while using [themer](https://github.com/CAAPIM/themer) and [react-themer](https://github.com/CAAPIM/react-themer) to make their components themes extensible.
 
 ## Installation
 ```js
 npm install react-themer-jss --save
 ```
-
-************************************************************
 
 ## Usage
 `/themer.js`
@@ -63,10 +62,7 @@ const helloWorldTheme = {
 };
 
 export default themer(helloWorldTheme)(HelloWorld);
-
 ```
-
-************************************************************
 
 ## Development
 |`npm run <script>`|Description|
@@ -79,7 +75,6 @@ export default themer(helloWorldTheme)(HelloWorld);
 |`precommit`|Runs `lint`, `flow`, `test` commands.|
 |`commit`|Uses [commitizen](https://github.com/commitizen/cz-cli) to do proper tagged commits.|
 |`release`|Uses [semantic-release](https://github.com/semantic-release/semantic-release) to trigger releases.|
-************************************************************
 
 ## How Can You Contribute
 Your contributions are welcome and much appreciated. To learn more, see the [Contribution Guidelines](https://github.com/CAAPIM/react-themer-jss/blob/master/CONTRIBUTING.md).
@@ -88,7 +83,6 @@ This project supports `commitizen`. You can use `npm run commit` to run the loca
 
 Alternatively, if you are simply using `git commit`, you must follow this format:
 `git commit -m "<type>: <subject>"`
-************************************************************
 
 ## License
 Copyright (c) 2016 CA. All rights reserved.
