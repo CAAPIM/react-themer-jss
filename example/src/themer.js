@@ -9,7 +9,7 @@ import { create as createInjectSheet } from 'react-jss';
 import preset from 'jss-preset-default';
 import { create as createThemer } from 'themer';
 import { create as createReactThemer } from 'react-themer';
-import { create as createReactThemerJssMiddleware } from '../../';
+import { createMiddleware as createReactThemerJssMiddleware } from 'react-themer-jss';
 
 const jss = createJss(preset());
 const injectSheet = createInjectSheet(jss);

@@ -1,8 +1,8 @@
 [ignore]
-.*/node_modules/react-themer/.*
 .*/node_modules/config-chain/.*
 .*/node_modules/npmconf/.*
 .*/node_modules/findup/.*
 .*/example/.*
 .*/lib/.*
 .*/coverage/.*
+.*/flow-coverage/.*

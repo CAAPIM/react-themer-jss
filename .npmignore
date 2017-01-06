@@ -1,6 +1,8 @@
 .github
 node_modules
 flow-typed
+coverage
+flow-coverage
 example
 src
 tests
