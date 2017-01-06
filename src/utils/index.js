@@ -14,7 +14,7 @@ import objectAssign from 'object-assign';
  * Property mapper to trasform ReactJSS output props into themer props.
  *
  * @param  {Object} props Input props from ReactJSS
- * @return {Function}     Output props to be passed to themed component
+ * @return {Object}       Output props to be passed to themed component
  */
 export const mapper = (props: Object) => {
   const styles = props.sheet && props.sheet.classes ? props.sheet.classes : {};

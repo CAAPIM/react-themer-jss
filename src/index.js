@@ -7,10 +7,10 @@
 // @flow
 
 import { createMiddleware } from './middleware';
-import { create } from './react-themer-jss';
+import { createDecorator } from './react-themer-jss';
 
 // export react-themer-jss singleton as default
-export default create();
+export default createDecorator();
 
 export {
   createMiddleware,
