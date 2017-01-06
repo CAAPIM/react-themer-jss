@@ -15,6 +15,7 @@
     "react-dom": "^15.4.1",
     "react-jss": "^4.2.0",
     "react-themer": "git+ssh://git@github.com:CAAPIM/react-themer.git",
+    "react-themer-jss": "git+ssh://git@github.com:CAAPIM/react-themer-jss.git",
     "themer": "git+ssh://git@github.com:CAAPIM/themer.git"
   },
   "devDependencies": {

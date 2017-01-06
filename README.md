@@ -15,34 +15,13 @@ npm install react-themer-jss --save
 ```
 
 ## Usage
-`/themer.js`
-```js
-import { create as createThemer } from 'themer';
-import { create as createReactThemer } from 'react-themer';
-import { create as createReactThemerJssMiddleware } from 'react-themer-jss';
-import { create as createJss } from 'jss';
-import { create as createInjectSheet } from 'react-jss';
 
-// setup JSS
-const jss = createJss();
-const injectSheet = createInjectSheet(jss);
-
-// setup Themer
-const themer = createThemer();
-
-// set react-themer-jss middleware
-themer.setMiddleware(createReactThemerJssMiddleware(injectSheet));
-
-// export react-themer instance
-export default createReactThemer(themer);
-```
+### Simple usage in React component
 
 `/HelloWorld.js`
 ```js
 import React from 'react';
-
-// import themer from local file
-import themer from './themer';
+import reactThemerJSS from 'react-themer-jss';
 
 const HelloWorld = (props) => {
   const styles = props.theme && props.theme.styles ? props.theme.styles : {};
@@ -61,7 +40,61 @@ const helloWorldTheme = {
   }
 };
 
-export default themer(helloWorldTheme)(HelloWorld);
+export default reactThemerJSS(helloWorldTheme)(HelloWorld);
+
+### Advanced usage
+
+You can also create your own instance of reactThemerJSS and specify custom options for JSS and Themer.
+
+`/customThemer.js`
+```js
+import { create as createJss } from 'jss';
+import { create as createInjectSheet } from 'react-jss';
+import { create as createThemer } from 'themer';
+import { create as createReactThemer } from 'react-themer';
+import { createMiddleware as createReactThemerJssMiddleware } from 'react-themer-jss';
+
+// setup custom JSS instance
+const jss = createJss();
+const injectSheet = createInjectSheet(jss);
+
+// create new Themer instance
+const themer = createThemer();
+
+// set react-themer-jss middleware
+themer.setMiddleware(createReactThemerJssMiddleware(injectSheet));
+
+// export react-themer instance
+export default createReactThemer(themer);
+```
+
+Then use the exported instance in your components:
+
+`/HelloWorld.js`
+```js
+import React from 'react';
+
+// import themer from local file
+import customThemer from './customThemer';
+
+const HelloWorld = (props) => {
+  const styles = props.theme && props.theme.styles ? props.theme.styles : {};
+  return <div className={styles.root}>Hello world</div>;
+};
+
+// define JSS styles in theme object
+const helloWorldTheme = {
+  styles: {
+    root: {
+      textAlign: 'center',
+      fontSize: '20px',
+      color: 'white',
+      background: 'blue'
+    }
+  }
+};
+
+export default customThemer(helloWorldTheme)(HelloWorld);
 ```
 
 ## Development

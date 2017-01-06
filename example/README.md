@@ -1,5 +1,5 @@
 # react-themer-jss example app
 
-- `nvm use` - if needed
-- `npm i` - if needed
-- `npm start` - the browser should open automatically
+- run `npm install`
+- run `npm start`
+- open browser at http://localhost:8080/
