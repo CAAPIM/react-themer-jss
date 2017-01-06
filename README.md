@@ -39,6 +39,7 @@ const helloWorldTheme = {
     }
   }
 };
+```
 
 export default reactThemerJSS(helloWorldTheme)(HelloWorld);
 
