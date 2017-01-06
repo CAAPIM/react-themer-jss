@@ -26,8 +26,11 @@
     "precommit": "npm run lint && npm run flow && npm run test"
   },
   "dependencies": {
-    "object-assign": "^4.1.0",
-    "recompose": "^0.20.2"
+    "object-assign": "^4.1.0"
+  },
+  "peerDependencies": {
+    "recompose": "^0.5.0",
+    "react-themer": "git+ssh://git@github.com:CAAPIM/react-themer.git"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
