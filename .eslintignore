@@ -1,5 +1,6 @@
 lib/*
 example/*
 coverage/*
+flow-coverage/*
 flow-typed/*
 node_modules/*
