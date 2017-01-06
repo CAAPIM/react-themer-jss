@@ -20,6 +20,7 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "codecov": "codecov",
+    "prebuild": "rimraf ./lib",
     "build": "babel --out-dir ./lib --ignore *.spec.js, ./src",
     "release": "semantic-release pre && npm publish && semantic-release post",
     "commit": "git-cz",
@@ -36,8 +37,8 @@
     "babel-cli": "^6.18.0",
     "babel-eslint": "^7.1.1",
     "babel-preset-ca": "git+ssh://git@github.com:CAAPIM/babel-preset-ca.git",
-    "commitizen": "2.8.6",
-    "cz-conventional-changelog": "1.2.0",
+    "commitizen": "^2.8.6",
+    "cz-conventional-changelog": "^1.2.0",
     "enzyme": "^2.6.0",
     "eslint": "^3.11.1",
     "eslint-config-ca": "git+ssh://git@github.com:CAAPIM/eslint-config-ca.git",
@@ -48,7 +49,8 @@
     "react": "^15.4.1",
     "react-addons-test-utils": "^15.4.1",
     "react-dom": "^15.4.1",
-    "semantic-release": "6.3.2",
+    "rimraf": "^2.5.4",
+    "semantic-release": "^6.3.2",
     "validate-commit-msg": "^2.8.2"
   },
   "config": {
@@ -60,6 +62,17 @@
     }
   },
   "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 90,
+        "functions": 90,
+        "lines": 90,
+        "statements": 90
+      }
+    },
     "unmockedModulePathPatterns": [
       "node_modules/react/",
       "node_modules/enzyme/"
