@@ -1,9 +1,9 @@
 # react-themer-jss
+[![Build Status](https://travis-ci.org/CAAPIM/react-themer-jss.svg?branch=master)](https://travis-ci.org/CAAPIM/react-themer-jss)
+[![codecov](https://codecov.io/gh/CAAPIM/react-themer-jss/branch/master/graph/badge.svg)](https://codecov.io/gh/CAAPIM/react-themer-jss)
+[![dependencies](https://david-dm.org/CAAPIM/react-themer-jss.svg)](https://david-dm.org/CAAPIM/react-themer-jss)
+[![devDependency Status](https://david-dm.org/CAAPIM/react-themer-jss/dev-status.svg)](https://david-dm.org/CAAPIM/react-themer-jss#info=devDependencies)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
-[![Build Status](https://travis-ci.org/caapim/react-themer-jss.svg?branch=master)](https://travis-ci.org/caapim/react-themer-jss)
-[![codecov](https://codecov.io/gh/caapim/react-themer-jss/branch/master/graph/badge.svg)](https://codecov.io/gh/caapim/react-themer-jss)
-[![dependencies](https://david-dm.org/caapim/react-themer-jss.svg)](https://david-dm.org/caapim/react-themer-jss)
-[![devDependency Status](https://david-dm.org/caapim/react-themer-jss/dev-status.svg)](https://david-dm.org/caapim/react-themer-jss#info=devDependencies)
 ************************************************************
 
 ## Overview
