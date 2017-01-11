@@ -22,8 +22,8 @@ script:
   - npm run build
 
 after_success:
-  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then npm run codecov; fi'
-  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then npm run release; fi'
+  - npm run codecov
+  - npm run release
 
 branches:
   except:
