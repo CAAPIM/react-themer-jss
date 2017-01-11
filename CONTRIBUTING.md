@@ -23,7 +23,7 @@ Follow these steps for pull requests:
 ### Contributor License Agreement ("CLA")
 To accept pull requests, submit a CLA. (Submitting a single CLA lets you work on any open source projects from CA, Inc.)
 
-Complete your CLA here: <https://www.clahub.com/agreements/CAAPIM/react-themer-jss>
+Complete your CLA here: [https://www.clahub.com/agreements/CAAPIM/react-themer-jss>]: https://www.clahub.com/agreements/brittonAtCa/react-themer
 
 ## Bugs
 We work hard to avoid them, but they still happen. If you're a CA customer, open an issue in our [Support Page][casupport], otherwise use GitHub issues.
@@ -50,6 +50,6 @@ By contributing to React Themer JSS, you agree that your contributions will be l
  [guidelines]: GUIDELINES.md
  [community]: https://communities.ca.com/community/ca-api-management-community/content
  [license-link]: LICENSE
- [cla]: https://www.clahub.com/agreements/CAAPIM/react-themer-jss
+ [cla]: https://www.clahub.com/agreements/brittonAtCa/react-themer
  [casupport]: https://support.ca.com/irj/portal/implsvcnewcase
 
