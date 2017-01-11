@@ -1,6 +1,6 @@
 {
   "name": "@caapim/react-themer-jss",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "author": "CA Technologies",
   "description": "Themer middleware for React JSS integration",
   "keywords": [

@@ -6,22 +6,25 @@ notifications:
   email: false
 
 node_js:
-- stable
+  - stable
 
 cache:
   directories:
-  - node_modules
+    - node_modules
+
+before_script:
+  - npm prune
 
 script:
-- npm run lint
-- npm run flow
-- npm run test:coverage
-- npm run build
+  - npm run lint
+  - npm run flow
+  - npm run test:coverage
+  - npm run build
 
 after_success:
-- npm run codecov
-- npm run release
+  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then npm run codecov; fi'
+  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then npm run release; fi'
 
 branches:
-  only:
-  - master
+  except:
+    - /^v\d+\.\d+\.\d+$/
