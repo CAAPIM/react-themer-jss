@@ -37,6 +37,7 @@
     "babel-cli": "^6.18.0",
     "babel-eslint": "^7.1.1",
     "babel-preset-ca": "^1.0.0",
+    "codecov": "^1.0.1",
     "commitizen": "^2.8.6",
     "cz-conventional-changelog": "^1.2.0",
     "enzyme": "^2.6.0",
