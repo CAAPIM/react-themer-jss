@@ -1,6 +1,7 @@
-lib/*
-example/*
+.github/*
+node_modules/*
 coverage/*
 flow-coverage/*
 flow-typed/*
-node_modules/*
+lib/*
+example/*

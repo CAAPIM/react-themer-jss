@@ -7,9 +7,9 @@
 import { create as createJss } from 'jss';
 import { create as createInjectSheet } from 'react-jss';
 import preset from 'jss-preset-default';
-import { create as createThemer } from 'themer';
-import { create as createReactThemer } from 'react-themer';
-import { createMiddleware as createReactThemerJssMiddleware } from 'react-themer-jss';
+import { create as createThemer } from '@caapim/themer';
+import { create as createReactThemer } from '@caapim/react-themer';
+import { createMiddleware as createReactThemerJssMiddleware } from '@caapim/react-themer-jss';
 
 const jss = createJss(preset());
 const injectSheet = createInjectSheet(jss);

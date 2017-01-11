@@ -11,7 +11,7 @@
 
 ## Installation
 ```js
-npm install react-themer-jss --save
+npm install @caapim/react-themer-jss --save
 ```
 
 ## Usage
@@ -21,7 +21,7 @@ npm install react-themer-jss --save
 `/HelloWorld.js`
 ```js
 import React from 'react';
-import reactThemerJSS from 'react-themer-jss';
+import reactThemerJSS from '@caapim/react-themer-jss';
 
 const HelloWorld = (props) => {
   const styles = props.theme && props.theme.styles ? props.theme.styles : {};
@@ -51,9 +51,9 @@ You can also create your own instance of reactThemerJSS and specify custom optio
 ```js
 import { create as createJss } from 'jss';
 import { create as createInjectSheet } from 'react-jss';
-import { create as createThemer } from 'themer';
-import { create as createReactThemer } from 'react-themer';
-import { createMiddleware as createReactThemerJssMiddleware } from 'react-themer-jss';
+import { create as createThemer } from '@caapim/themer';
+import { create as createReactThemer } from '@caapim/react-themer';
+import { createMiddleware as createReactThemerJssMiddleware } from '@caapim/react-themer-jss';
 
 // setup custom JSS instance
 const jss = createJss();
@@ -111,7 +111,7 @@ export default customThemer(helloWorldTheme)(HelloWorld);
 |`release`|Uses [semantic-release](https://github.com/semantic-release/semantic-release) to trigger releases.|
 
 ## How Can You Contribute
-Your contributions are welcome and much appreciated. To learn more, see the [Contribution Guidelines](https://github.com/CAAPIM/react-themer-jss/blob/master/CONTRIBUTING.md).
+Your contributions are welcome and much appreciated. To learn more, see the [Contribution Guidelines](CONTRIBUTING.md).
 
 This project supports `commitizen`. You can use `npm run commit` to run the local instance of `commitizen` or `git cz` if you have it installed globally.
 
@@ -120,4 +120,4 @@ Alternatively, if you are simply using `git commit`, you must follow this format
 
 ## License
 Copyright (c) 2017 CA. All rights reserved.
-This software may be modified and distributed under the terms of the MIT license. To learn more, see the [License](https://github.com/CAAPIM/react-themer-jss/blob/master/LICENSE).
+This software may be modified and distributed under the terms of the MIT license. To learn more, see the [License](LICENSE).

@@ -8,7 +8,7 @@
 
 import React from 'react';
 import { shallow } from 'enzyme';
-import reactThemer from 'react-themer';
+import reactThemer from '@caapim/react-themer';
 
 import { createDecorator } from '../../src/react-themer-jss';
 import TestComponent from '../fixtures/TestComponent';

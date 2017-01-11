@@ -10,8 +10,8 @@
 import { create as createJss } from 'jss';
 import preset from 'jss-preset-default';
 import { create as createInjectSheet } from 'react-jss';
-import { create as createThemer } from 'themer';
-import { create as createReactThemer } from 'react-themer';
+import { create as createThemer } from '@caapim/themer';
+import { create as createReactThemer } from '@caapim/react-themer';
 
 import { createMiddleware } from '../middleware';
 

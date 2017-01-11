@@ -1,5 +1,6 @@
 {
   "name": "react-themer-jss-example",
+  "private": true,
   "version": "1.0.0",
   "description": "User react-themer with JSS stylesheets",
   "main": "index.js",
@@ -9,19 +10,19 @@
   "author": "CA Technologies",
   "license": "MIT",
   "dependencies": {
+    "@caapim/react-themer": "^1.0.0",
+    "@caapim/react-themer-jss": "^1.0.0",
+    "@caapim/themer": "^1.0.0",
     "jss": "^5.5.6",
     "jss-preset-default": "^0.9.0",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
-    "react-jss": "^4.2.0",
-    "react-themer": "git+ssh://git@github.com:CAAPIM/react-themer.git",
-    "react-themer-jss": "git+ssh://git@github.com:CAAPIM/react-themer-jss.git",
-    "themer": "git+ssh://git@github.com:CAAPIM/themer.git"
+    "react-jss": "^4.2.0"
   },
   "devDependencies": {
     "babel-core": "^6.20.0",
     "babel-loader": "^6.2.9",
-    "babel-preset-ca": "git+ssh://git@github.com:CAAPIM/babel-preset-ca.git",
+    "babel-preset-ca": "^1.0.0",
     "html-webpack-plugin": "^2.24.1",
     "webpack": "^1.14.0",
     "webpack-dev-server": "^1.16.2"
