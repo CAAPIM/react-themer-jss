@@ -11,7 +11,7 @@
 
 ## Installation
 ```js
-npm install @caapim/react-themer-jss --save
+npm install ca-ui-react-themer-jss --save
 ```
 
 ## Usage
@@ -21,7 +21,7 @@ npm install @caapim/react-themer-jss --save
 `/HelloWorld.js`
 ```js
 import React from 'react';
-import reactThemerJSS from '@caapim/react-themer-jss';
+import reactThemerJSS from 'ca-ui-react-themer-jss';
 
 const HelloWorld = (props) => {
   const styles = props.theme && props.theme.styles ? props.theme.styles : {};
@@ -51,9 +51,9 @@ You can also create your own instance of reactThemerJSS and specify custom optio
 ```js
 import { create as createJss } from 'jss';
 import { create as createInjectSheet } from 'react-jss';
-import { create as createThemer } from '@caapim/themer';
-import { create as createReactThemer } from '@caapim/react-themer';
-import { createMiddleware as createReactThemerJssMiddleware } from '@caapim/react-themer-jss';
+import { create as createThemer } from 'ca-ui-themer';
+import { create as createReactThemer } from 'ca-ui-react-themer';
+import { createMiddleware as createReactThemerJssMiddleware } from 'ca-ui-react-themer-jss';
 
 // setup custom JSS instance
 const jss = createJss();
