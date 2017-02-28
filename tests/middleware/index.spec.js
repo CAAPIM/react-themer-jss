@@ -30,7 +30,7 @@ const testResolvedTheme2 = {
 describe('middleware', () => {
   test('JSS classes are mapped to the `theme.styles` prop', () => {
     const reactThemerJssMiddleware = createMiddleware(injectSheet);
-    const DecoratedComponent = reactThemerJssMiddleware(TestComponent, testResolvedTheme1.styles);
+    const DecoratedComponent = reactThemerJssMiddleware(TestComponent, testResolvedTheme1);
     const wrapper = shallow(<DecoratedComponent title="test component" />);
     const html = wrapper.html();
     const regex = /<div class="root-[0-9]+">test component<\/div>/;
@@ -39,7 +39,7 @@ describe('middleware', () => {
 
   test('If JSS returns no styles, then `theme.styles` should be an empty object', () => {
     const reactThemerJssMiddleware = createMiddleware(injectSheet);
-    const DecoratedComponent = reactThemerJssMiddleware(TestComponent, testResolvedTheme2.styles);
+    const DecoratedComponent = reactThemerJssMiddleware(TestComponent, testResolvedTheme2);
     const wrapper = shallow(<DecoratedComponent title="test component" />);
     expect(wrapper.html()).toBe('<div>test component</div>');
   });
@@ -53,7 +53,7 @@ describe('middleware', () => {
 
   test('global injectSheet from react-jss is used if no injectSheet instance is specified', () => {
     const reactThemerJssMiddleware = createMiddleware();
-    const DecoratedComponent = reactThemerJssMiddleware(TestComponent, testResolvedTheme1.styles);
+    const DecoratedComponent = reactThemerJssMiddleware(TestComponent, testResolvedTheme1);
     const wrapper = shallow(<DecoratedComponent title="test component" />);
     const html = wrapper.html();
     const regex = /<div class="root-[0-9]+">test component<\/div>/;

@@ -21,9 +21,9 @@ import { mapperDecorator } from '../utils';
  */
 export function createMiddleware(customInjectSheet: ?Function) {
   const injectSheetInstance = customInjectSheet || injectSheet;
-  return (component: any, computedStyles: any) =>
+  return (component: any, resolvedTheme: any = {}) =>
     compose(
-      injectSheetInstance(computedStyles),
+      injectSheetInstance(resolvedTheme.styles),
       mapperDecorator
     )(component);
 }
