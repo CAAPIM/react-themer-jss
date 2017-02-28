@@ -21,6 +21,7 @@ export const mapper = (props: Object) => {
   const theme = objectAssign({}, props.theme, { styles });
   const newProps = objectAssign({}, props, { theme });
   delete newProps.sheet;
+  delete newProps.classes;
   return newProps;
 };
 
