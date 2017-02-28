@@ -20,6 +20,9 @@ const testPropsInput = {
       root: 'root-class-1234',
     },
   },
+  classes: {
+    root: 'root-class-1234',
+  },
 };
 
 describe('mapper', () => {
@@ -51,5 +54,10 @@ describe('mapper', () => {
   test('removes props.sheet', () => {
     const testPropsOutput = mapper(testPropsInput);
     expect(testPropsOutput.sheet).toBe(undefined);
+  });
+
+  test('removes props.classes', () => {
+    const testPropsOutput = mapper(testPropsInput);
+    expect(testPropsOutput.classes).toBe(undefined);
   });
 });
