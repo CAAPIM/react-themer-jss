@@ -15,36 +15,13 @@ import { create as createReactThemer } from 'ca-ui-react-themer';
 
 import { createMiddleware } from '../middleware';
 
-/**
- * Creates a new instance of react-themer with react-themer-jss middleware
- * applied to it and with default JSS settings.
- *
- * @return Instance of react-themer
- * @private
- */
-function createInstance() {
-  const jss = createJss(preset());
-  const injectSheet = createInjectSheet(jss);
-  const themer = createThemer();
-  themer.setMiddleware(createMiddleware(injectSheet));
+const jss = createJss(preset());
+const injectSheet = createInjectSheet(jss);
+const themer = createThemer();
+themer.setMiddleware(createMiddleware(injectSheet));
+const reactThemerJss = createReactThemer(themer);
 
-  return createReactThemer(themer);
-}
+// expose themer instance
+reactThemerJss.themer = themer;
 
-/**
- * Creates a convinience decorator that lazyly instantiate and runs an
- * instance of react-themer with react-themer-jss middleware.
- *
- * @param  {Function} customCreateInstance react-themer generator function
- * @return {Function}                      Lazy react-themer decorator
- * @public
- */
-export function createDecorator(create: Function = createInstance) {
-  let instanceCache: ?Function;
-  return (...rest: any) => {
-    if (!instanceCache) {
-      instanceCache = create();
-    }
-    return instanceCache(...rest);
-  };
-}
+export default reactThemerJss;
