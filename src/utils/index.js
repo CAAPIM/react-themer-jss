@@ -5,10 +5,11 @@
  */
 
 // @flow
-/* eslint-disable import/prefer-default-export */
 
 import mapProps from 'recompose/mapProps';
 import objectAssign from 'object-assign';
+import objectOmit from 'object.omit';
+import { mapThemeProps } from 'ca-ui-themer';
 
 /**
  * Property mapper to trasform ReactJSS output props into themer props.
@@ -17,13 +18,17 @@ import objectAssign from 'object-assign';
  * @return {Object}       Output props to be passed to themed component
  */
 export const mapper = (props: Object) => {
-  const styles = props.sheet && props.sheet.classes ? props.sheet.classes : {};
-  const theme = objectAssign({}, props.theme, { styles });
-  const newProps = objectAssign({}, props, { theme });
-  delete newProps.sheet;
-  delete newProps.classes;
-  return newProps;
+  let styles;
+  if (props.sheet && props.sheet.classes) {
+    styles = props.sheet.classes;
+  } else if (props.classes) {
+    styles = props.classes;
+  } else {
+    return props;
+  }
+  const resolvedTheme = objectAssign({}, props.theme, { styles });
+  return mapThemeProps(objectOmit(props, ['sheet', 'classes']), resolvedTheme);
 };
 
 // react decorator based on prop-mapper function
-export const mapperDecorator = mapProps(mapper);
+export const mapPropsDecorator = mapProps(mapper);
