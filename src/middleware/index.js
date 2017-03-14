@@ -10,7 +10,7 @@
 import injectSheet from 'react-jss';
 import compose from 'recompose/compose';
 
-import { mapperDecorator } from '../utils';
+import { mapPropsDecorator } from '../utils';
 
 /**
  * Creates a new JSS middleware for themer.
@@ -24,6 +24,6 @@ export function createMiddleware(customInjectSheet: ?Function) {
   return (component: any, resolvedTheme: any = {}) =>
     compose(
       injectSheetInstance(resolvedTheme.styles),
-      mapperDecorator
+      mapPropsDecorator,
     )(component);
 }
