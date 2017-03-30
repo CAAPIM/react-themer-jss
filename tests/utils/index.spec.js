@@ -60,9 +60,4 @@ describe('mapper', () => {
     const testPropsOutput = mapper(testPropsInput);
     expect(testPropsOutput.sheet).toBe(undefined);
   });
-
-  test('removes props.classes', () => {
-    const testPropsOutput = mapper(testPropsInput);
-    expect(testPropsOutput.classes).toBe(undefined);
-  });
 });

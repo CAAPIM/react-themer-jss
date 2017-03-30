@@ -21,7 +21,4 @@ const themer = createThemer();
 themer.setMiddleware(createMiddleware(injectSheet));
 const reactThemerJss = createReactThemer(themer);
 
-// expose themer instance
-reactThemerJss.themer = themer;
-
 export default reactThemerJss;

@@ -8,7 +8,6 @@
 
 import React from 'react';
 import { shallow } from 'enzyme';
-import Themer from 'ca-ui-themer/lib/Themer';
 
 import reactThemerJss from '../../src/react-themer-jss';
 import TestComponent from '../fixtures/TestComponent';
@@ -26,11 +25,7 @@ describe('React Themer JSS', () => {
     const ThemedTestComponent = reactThemerJss(testTheme)(TestComponent);
     const wrapper = shallow(<ThemedTestComponent title="test component" />);
     const html = wrapper.html();
-    const regex = /<div class="root-[0-9]+">test component<\/div>/;
+    const regex = /<div class="root-[0-9|-]+">test component<\/div>/;
     expect(!!html.match(regex)).toBe(true);
-  });
-
-  it('should expose themer instance', () => {
-    expect(reactThemerJss.themer).toBeInstanceOf(Themer);
   });
 });

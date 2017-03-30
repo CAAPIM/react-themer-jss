@@ -6,7 +6,7 @@
 
 // @flow
 
-import React, { PropTypes } from 'react';
+import React from 'react';
 
 type Props = {
   theme: Object,
@@ -17,11 +17,6 @@ type Props = {
 const TestComponent = ({ theme, title }: Props) => {
   const styles = theme && theme.styles ? theme.styles : {};
   return <div className={styles.root}>{title}</div>;
-};
-
-TestComponent.propTypes = {
-  theme: PropTypes.object,
-  title: PropTypes.string,
 };
 
 export default TestComponent;
