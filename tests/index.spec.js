@@ -25,7 +25,7 @@ describe('index.js', () => {
     const ThemedTestComponent = reactThemerJSS(testTheme)(TestComponent);
     const wrapper = shallow(<ThemedTestComponent title="test component" />);
     const html = wrapper.html();
-    const regex = /<div class="root-[0-9]+">test component<\/div>/;
+    const regex = /<div class="root-[0-9|-]+">test component<\/div>/;
     expect(!!html.match(regex)).toBe(true);
   });
 });

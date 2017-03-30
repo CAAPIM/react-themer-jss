@@ -33,7 +33,7 @@ describe('middleware', () => {
     const DecoratedComponent = reactThemerJssMiddleware(TestComponent, testResolvedTheme1);
     const wrapper = shallow(<DecoratedComponent title="test component" />);
     const html = wrapper.html();
-    const regex = /<div class="root-[0-9]+">test component<\/div>/;
+    const regex = /<div class="root-[0-9|-]+">test component<\/div>/;
     expect(!!html.match(regex)).toBe(true);
   });
 
@@ -56,7 +56,7 @@ describe('middleware', () => {
     const DecoratedComponent = reactThemerJssMiddleware(TestComponent, testResolvedTheme1);
     const wrapper = shallow(<DecoratedComponent title="test component" />);
     const html = wrapper.html();
-    const regex = /<div class="root-[0-9]+">test component<\/div>/;
+    const regex = /<div class="root-[0-9|-]+">test component<\/div>/;
     expect(!!html.match(regex)).toBe(true);
   });
 });
