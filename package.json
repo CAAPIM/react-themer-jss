@@ -30,7 +30,7 @@
     "precommit": "npm run lint && npm run flow && npm run test"
   },
   "dependencies": {
-    "ca-ui-react-themer": "^2.1.0",
+    "ca-ui-react-themer": "^2.1.1",
     "ca-ui-themer": "^2.2.1",
     "jss": "^6.5.0",
     "jss-preset-default": "^1.3.1",
