@@ -1,4 +1,6 @@
 # react-themer-jss
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/CAAPIM/react-themer-jss.svg)](https://greenkeeper.io/)
 [![Build Status](https://travis-ci.org/CAAPIM/react-themer-jss.svg?branch=master)](https://travis-ci.org/CAAPIM/react-themer-jss)
 [![codecov](https://codecov.io/gh/CAAPIM/react-themer-jss/branch/master/graph/badge.svg)](https://codecov.io/gh/CAAPIM/react-themer-jss)
 [![dependencies](https://david-dm.org/CAAPIM/react-themer-jss.svg)](https://david-dm.org/CAAPIM/react-themer-jss)
