@@ -37,7 +37,7 @@
     "object-assign": "^4.1.1",
     "object.omit": "^2.0.1",
     "react-jss": "^5.4.0",
-    "recompose": "^0.22.0"
+    "recompose": "^0.23.0"
   },
   "devDependencies": {
     "babel-cli": "^6.24.0",
