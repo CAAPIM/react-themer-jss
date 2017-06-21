@@ -1,9 +1,3 @@
-/**
- * Copyright (c) 2017 CA. All rights reserved.
- * This software may be modified and distributed under the terms
- * of the MIT license. See the LICENSE file for details.
- */
-
 // flow-typed signature: 323fcc1a3353d5f7a36c5f1edcd963ef
 // flow-typed version: 41f45a7d8c/react-addons-test-utils_v15.x.x/flow_>=v0.23.x
 

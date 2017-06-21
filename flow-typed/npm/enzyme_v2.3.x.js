@@ -1,11 +1,5 @@
-/**
- * Copyright (c) 2017 CA. All rights reserved.
- * This software may be modified and distributed under the terms
- * of the MIT license. See the LICENSE file for details.
- */
-
-// flow-typed signature: f3b75915e82ea23b5d37b8b584eddb76
-// flow-typed version: d4e590e9bf/enzyme_v2.3.x/flow_>=v0.28.x
+// flow-typed signature: 2347f05faac22d91369b6abccedcac7e
+// flow-typed version: 64d5f46151/enzyme_v2.3.x/flow_>=v0.28.x
 
 declare module 'enzyme' {
   declare type PredicateFunction<T: Wrapper> = (wrapper: T) => boolean;
@@ -25,6 +19,8 @@ declare module 'enzyme' {
     containsMatchingElement(node: React$Element<any>): boolean;
     containsAllMatchingElements(nodes: NodeOrNodes): boolean;
     containsAnyMatchingElements(nodes: NodeOrNodes): boolean;
+    dive(option?: { context?: Object }): this;
+    exists(): boolean;
     matchesElement(node: React$Element<any>): boolean;
     hasClass(className: string): boolean;
     is(selector: EnzymeSelector): boolean;
@@ -40,6 +36,8 @@ declare module 'enzyme' {
     text(): string;
     html(): string;
     get(index: number): React$Element<any>;
+    getNode(): React$Element<any>;
+    getNodes(): Array<React$Element<any>>;
     at(index: number): this;
     first(): this;
     last(): this;
@@ -49,10 +47,10 @@ declare module 'enzyme' {
     prop(key: string): any;
     key(): string;
     simulate(event: string, ...args: Array<any>): this;
-    setState(state: Object): this;
+    setState(state: Object, callback?: Function): this,
     setProps(props: Object): this;
     setContext(context: Object): this;
-    instance(): React$Component<any, any, any>;
+    instance(): React$Component<*, *, *>;
     update(): this;
     debug(): string;
     type(): string | Function | null;
@@ -69,6 +67,7 @@ declare module 'enzyme' {
   }
 
   declare export class ReactWrapper extends Wrapper {
+    constructor(nodes: NodeOrNodes, root: any, options?: ?Object): ReactWrapper;
     mount(): this;
     ref(refName: string): this;
     detach(): void;

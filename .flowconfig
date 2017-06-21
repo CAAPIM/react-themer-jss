@@ -7,4 +7,10 @@
 .*/node_modules/config-chain/.*
 .*/node_modules/npmconf/.*
 .*/node_modules/flow-coverage-report/.*
-.*/node_modules/jss/.*
+.*/node_modules/travis-ci/.*
+
+[libs]
+node_modules/jss/flow-typed
+
+[options]
+unsafe.enable_getters_and_setters=true
