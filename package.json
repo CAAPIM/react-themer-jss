@@ -32,7 +32,7 @@
   "dependencies": {
     "ca-ui-react-themer": "^2.3.0",
     "ca-ui-themer": "^2.3.0",
-    "jss": "^7.1.7",
+    "jss": "^8.1.0",
     "jss-preset-default": "^2.0.0",
     "object-assign": "^4.1.1",
     "object.omit": "^2.0.1",
