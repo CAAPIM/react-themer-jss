@@ -4,13 +4,17 @@
  * of the MIT license. See the LICENSE file for details.
  */
 
+// @flow
+/* eslint-disable import/prefer-default-export */
+
 import { create as createJss } from 'jss';
-import { create as createInjectSheet } from 'react-jss';
 import preset from 'jss-preset-default';
 import isolate from 'jss-isolate';
+import { create as createInjectSheet } from 'react-jss';
 import { create as createThemer } from 'ca-ui-themer';
 import { create as createReactThemer } from 'ca-ui-react-themer';
-import { createMiddleware as createReactThemerJssMiddleware } from 'ca-ui-react-themer-jss';
+
+import { createMiddleware } from '../middleware';
 
 const jss = createJss(preset());
 jss.use(isolate({
@@ -18,8 +22,8 @@ jss.use(isolate({
 }));
 
 const injectSheet = createInjectSheet(jss);
-const reactThemerJssMiddleware = createReactThemerJssMiddleware(injectSheet);
 const themer = createThemer();
-themer.setMiddleware(reactThemerJssMiddleware);
+themer.setMiddleware(createMiddleware(injectSheet));
+const reactThemerJss = createReactThemer(themer);
 
-export default createReactThemer(themer);
+export default reactThemerJss;
