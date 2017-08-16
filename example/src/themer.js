@@ -7,16 +7,11 @@
 import { create as createJss } from 'jss';
 import { create as createInjectSheet } from 'react-jss';
 import preset from 'jss-preset-default';
-import isolate from 'jss-isolate';
 import { create as createThemer } from 'ca-ui-themer';
 import { create as createReactThemer } from 'ca-ui-react-themer';
 import { createMiddleware as createReactThemerJssMiddleware } from 'ca-ui-react-themer-jss';
 
 const jss = createJss(preset());
-jss.use(isolate({
-  isolate: true,
-}));
-
 const injectSheet = createInjectSheet(jss);
 const reactThemerJssMiddleware = createReactThemerJssMiddleware(injectSheet);
 const themer = createThemer();
