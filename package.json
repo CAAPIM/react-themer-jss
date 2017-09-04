@@ -36,7 +36,7 @@
     "jss-isolate": "^4.0.1",
     "jss-preset-default": "^3.0.0",
     "object-assign": "^4.1.1",
-    "object.omit": "^2.0.1",
+    "object.omit": "^3.0.0",
     "react-jss": "^6.1.1",
     "recompose": "^0.23.5"
   },
