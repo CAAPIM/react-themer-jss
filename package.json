@@ -50,7 +50,7 @@
     "enzyme": "^2.8.2",
     "eslint": "^3.19.0",
     "eslint-config-ca": "^2.0.1",
-    "flow-bin": "^0.50.0",
+    "flow-bin": "^0.57.1",
     "flow-copy-source": "^1.2.0",
     "flow-coverage-report": "^0.3.0",
     "react": "15.4.2",
