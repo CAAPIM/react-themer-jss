@@ -56,7 +56,7 @@
     "react": "15.4.2",
     "react-addons-test-utils": "15.4.2",
     "react-dom": "15.4.2",
-    "husky": "^0.13.4",
+    "husky": "^2.5.0",
     "jest": "^20.0.4",
     "rimraf": "^2.6.1",
     "semantic-release": "^6.3.6",
