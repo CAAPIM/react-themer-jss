@@ -37,7 +37,7 @@
     "jss-preset-default": "^3.0.0",
     "object-assign": "^4.1.1",
     "object.omit": "^2.0.1",
-    "react-jss": "^6.1.1",
+    "react-jss": "^10.0.4",
     "recompose": "^0.23.5"
   },
   "devDependencies": {
